@@ -1,19 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
 
     const navLink = <>
 
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/">Update Profile</Link></li>
-        <li><Link to="/">User Profile</Link></li>
-        <li><Link to="/">Login</Link></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/">Update Profile</NavLink></li>
+        <li><NavLink to="/">User Profile</NavLink></li>
+        <li><NavLink to="/login">Login</NavLink></li>
 
 
     </>
     return (
-        <div className="navbar text-white bg-[#525079]">
+        <div className="navbar text-white bg-[#525079] font-bold">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
