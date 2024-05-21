@@ -1,8 +1,19 @@
-# React + Vite
+# Commercial Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+About my website onty 5 sentence
+- Sign up system
+- Log in system
+- Password validation
+- Responsive for mobile, tablet, laptop
+- Implement private routes
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Npm package names are:
+
+- Animate.css
+- React Hook form
+- Swiper slider
+
+
+- [Git hub link](https://github.com/programming-hero-web-course-4/b9a9-real-estate-rebahaider) 
+- [Live site link]() 

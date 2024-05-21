@@ -53,7 +53,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <Link to="/" className="flex items-center gap-4">
+                <Link to="/" className="md:flex items-center gap-4">
                     <img className="rounded-full w-20" src="/logo.PNG" alt="" />
                     <h3 className="text-xl font-bold">Commercial Website</h3>
                 </Link>
