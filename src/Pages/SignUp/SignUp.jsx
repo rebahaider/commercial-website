@@ -1,13 +1,25 @@
 import { Link } from "react-router-dom";
 import signUpImg from "../../assets/signup.jpg"
 import { useForm } from "react-hook-form";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProviders";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
 
+    const [showPassword, setShowPassword] = useState('');
+
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
+    const { createUser } = useContext(AuthContext);
 
     const onSubmit = (data) => {
         console.log(data);
+        createUser(data.email, data.password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+            })
         reset();
     };
 
@@ -38,7 +50,12 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name="password" {...register("password", { required: true, minLength: 6, pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,10}$/ })} placeholder="password" className="input input-bordered" />
+                            <input type={showPassword ? "text" : "password"} name="password" {...register("password", { required: true, minLength: 6, pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,10}$/ })} placeholder="password" className="input input-bordered" />
+                            <span className="absolute bottom-10 right-48" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                }
+                            </span>
                             {errors.password?.type === "required" && (
                                 <p className="text-red-600">Password is required</p>
                             )}

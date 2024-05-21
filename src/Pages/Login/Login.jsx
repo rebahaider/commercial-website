@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import loginImg from "../../assets/login.jpg";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+
+
+    const [showPassword, setShowPassword] = useState('');
 
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
@@ -28,7 +33,12 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="password" name="password" {...register("password", { required: true })} className="input input-bordered" />
+                            <input type={showPassword ? "text" : "password"} placeholder="password" name="password" {...register("password", { required: true })} className="input input-bordered" />
+                            <span className="absolute bottom-32 right-48" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                }
+                            </span>
                             {errors.password && <span className="text-red-600">Password is required</span>}
                         </div>
                         <div className="form-control mt-6">
