@@ -1,14 +1,43 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import { AuthContext } from "../../Providers/AuthProviders";
+import Swal from "sweetalert2";
+import 'animate.css';
 
 const Navbar = () => {
+
+    const { user, logout } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logout()
+            .then(() => {
+                Swal.fire({
+                    title: "User Log Out Successfully",
+                    showClass: {
+                        popup: `
+                        animate__animated
+                        animate__fadeInUp
+                        animate__faster
+                      `
+                    },
+                    hideClass: {
+                        popup: `
+                        animate__animated
+                        animate__fadeOutDown
+                        animate__faster
+                      `
+                    }
+                });
+            })
+            .catch(error => console.log(error))
+    }
 
     const navLink = <>
 
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/">Update Profile</NavLink></li>
         <li><NavLink to="/">User Profile</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
+        <li><NavLink to="/signUp">Sign Up</NavLink></li>
 
 
     </>
@@ -54,7 +83,11 @@ const Navbar = () => {
                         <li><a>Logout</a></li>
                     </ul>
                 </div>
-                <a className="btn">Log In</a>
+                <div>
+                    {
+                        user ? <button onClick={handleLogout} className="btn">Log Out</button> : <Link to="/login" className="btn">Log In</Link>
+                    }
+                </div>
             </div>
         </div>
     );
