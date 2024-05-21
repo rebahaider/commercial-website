@@ -5,7 +5,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 
+
 const Slider = () => {
+   
 
     return (
         <>

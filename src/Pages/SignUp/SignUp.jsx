@@ -1,13 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import signUpImg from "../../assets/signup.jpg"
 import { useForm } from "react-hook-form";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Swal from "sweetalert2";
 import 'animate.css';
 
 const SignUp = () => {
+
+    // set dynamic title
+    useEffect(() => {
+        document.title = "Commercial website | SignUp"
+    })
 
     const [showPassword, setShowPassword] = useState('');
     const navigate = useNavigate();
@@ -48,7 +53,7 @@ const SignUp = () => {
         <div className="bg-base-200">
             <div className="md:flex justify-around items-center gap-6 mt-20 mb-20 mr-10 ml-10">
                 <div className="md:w-1/2">
-                    <img className="rounded-xl" src={signUpImg} alt="" />
+                    <img className="rounded-lg h-96 mx-auto" src={signUpImg} alt="" />
                 </div>
                 <div className="md:w-1/2 shadow-2xl bg-base-100 p-10 mt-20 mb-20">
                     <h1 className="text-5xl font-bold text-center">Sign Up Now </h1>

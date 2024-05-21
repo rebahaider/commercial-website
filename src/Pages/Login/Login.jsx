@@ -1,13 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import loginImg from "../../assets/login.jpg";
 import { useForm } from "react-hook-form";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import 'animate.css';
 
 const Login = () => {
+
+    // set dynamic title
+    useEffect(() => {
+        document.title = "Commercial website | LogIn"
+    })
 
     const { signInUser } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState('');
