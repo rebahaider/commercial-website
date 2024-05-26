@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import signUpImg from "../../assets/signup.jpg"
 import { useForm } from "react-hook-form";
 import { useContext, useEffect, useState } from "react";
@@ -21,6 +21,7 @@ const SignUp = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const { createUser } = useContext(AuthContext);
+    const location = useLocation();
 
     const onSubmit = (data) => {
         console.log(data);
@@ -53,7 +54,7 @@ const SignUp = () => {
                 })
                     .then(() => console.log("profile updated"))
                     .catch()
-                navigate("/")
+                navigate(location?.state ? location.state : "/")
 
             })
             .catch(error => {

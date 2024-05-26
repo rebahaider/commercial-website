@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Estates = () => {
@@ -11,9 +12,9 @@ const Estates = () => {
             .then(data => setEstates(data))
     }, [])
     return (
-        <div className="mb-10">
-            <h2>{estates.length}</h2>
-            <div className="grid grid-cols-3 gap-6 ">
+        <div className="mb-10 mt-10">
+            <h2 className="text-[#525079] text-4xl font-bold text-center mb-5 ">Our Commercial Estates</h2>
+            <div className="grid grid-cols-3 gap-6 bg-base-200 p-10 ">
                 {
                     estates.map(estate => <div key={estate.id} className="card bg-base-100 shadow-xl rounded-2xl">
                         <figure><img className="w-80 h-80 pt-4" src={estate.image} alt="Album" /></figure>
@@ -33,7 +34,7 @@ const Estates = () => {
                                 </ul>
                             </p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">View Property</button>
+                                <Link to={`/singleEstate/${estate.id}`} className="btn bg-[#525079] text-white font-bold">View Property</Link>
                             </div>
                         </div>
                     </div>)

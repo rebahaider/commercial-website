@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
+import SingleEstate from "../Pages/Estates/SingleEstate";
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
             {
                 path: "/updateProfile",
                 element: <PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>
+            },
+            {
+                path: "/singleEstate/:id",
+                element: <PrivateRoutes><SingleEstate></SingleEstate></PrivateRoutes>,
+                loader: () => fetch('fakeData.json')
             }
         ]
     },
