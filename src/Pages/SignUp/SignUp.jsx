@@ -6,6 +6,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Swal from "sweetalert2";
 import 'animate.css';
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
 
@@ -46,13 +47,13 @@ const SignUp = () => {
                 });
 
                 //  update profile
-                // updateProfile(result.user, {
-                //     displayName: data.name,
-                //     photoURL:data.photo,
-                // })
-                // .then(()=>console.log("profile updated"))
-                // .catch()
-
+                updateProfile(result.user, {
+                    displayName: data.name,
+                    photoURL: data.photo,
+                })
+                    .then(() => console.log("profile updated"))
+                    .catch()
+                navigate("/")
 
             })
             .catch(error => {
@@ -76,7 +77,7 @@ const SignUp = () => {
                 });
             })
         reset();
-        navigate("/")
+
     };
 
     return (

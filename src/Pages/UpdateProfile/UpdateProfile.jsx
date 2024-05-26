@@ -20,50 +20,50 @@ const UpdateProfile = () => {
     const { user } = useContext(AuthContext);
 
     const onSubmit = (data) => {
-                // update profile
-                updateProfile(user, {
-                    displayName: data.name,
-                    photoURL: data.photo,
-                })
-                    .then(() => {
-                        Swal.fire({
-                            title: "User Successfully Updated",
-                            showClass: {
-                                popup: `
+        // update profile
+        updateProfile(user, {
+            displayName: data.name,
+            photoURL: data.photo,
+        })
+            .then(() => {
+                Swal.fire({
+                    title: "User Successfully Updated",
+                    showClass: {
+                        popup: `
                                 animate__animated
                                 animate__fadeInUp
                                 animate__faster
                               `
-                            },
-                            hideClass: {
-                                popup: `
+                    },
+                    hideClass: {
+                        popup: `
                                 animate__animated
                                 animate__fadeOutDown
                                 animate__faster
                               `
-                            }
-                        });
-                    })
-                    .catch(error => {
-                        console.log(error.message);
-                        Swal.fire({
-                            title: "User already exist",
-                            showClass: {
-                                popup: `
+                    }
+                });
+            })
+            .catch(error => {
+                console.log(error.message);
+                Swal.fire({
+                    title: "User not updated",
+                    showClass: {
+                        popup: `
                                 animate__animated
                                 animate__fadeInUp
                                 animate__faster
                               `
-                            },
-                            hideClass: {
-                                popup: `
+                    },
+                    hideClass: {
+                        popup: `
                                 animate__animated
                                 animate__fadeOutDown
                                 animate__faster
                               `
-                            }
-                        });
-                    });
+                    }
+                });
+            });
 
         reset();
         navigate("/")

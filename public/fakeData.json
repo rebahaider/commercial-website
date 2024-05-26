@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Modern Family Home",
+        "segment_name": "Residential",
+        "description": "A beautiful modern home with all the amenities for a comfortable family life.",
+        "price": "$350,000",
+        "status": "sale",
+        "area": "2500 sq ft",
+        "location": "123 Maple Street, Springfield, IL",
+        "facilities": [
+            "living room",
+            "swimming pool",
+            "kitchen"
+        ],
+        "image": "https://example.com/images/modern-family-home.jpg"
+    },
+    {
+        "id": 2,
+        "estate_title": "Luxury Apartment",
+        "segment_name": "Residential",
+        "description": "A luxury apartment with stunning city views and top-notch facilities.",
+        "price": "$450,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "456 Elm Street, New York, NY",
+        "facilities": [
+            "living room",
+            "swimming pool",
+            "kitchen"
+        ],
+        "image": "https://example.com/images/luxury-apartment.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Cozy Cottage",
+        "segment_name": "Residential",
+        "description": "A charming cottage perfect for a weekend getaway or a small family.",
+        "price": "$200,000",
+        "status": "sale",
+        "area": "1200 sq ft",
+        "location": "789 Pine Street, Asheville, NC",
+        "facilities": [
+            "living room",
+            "kitchen"
+        ],
+        "image": "https://example.com/images/cozy-cottage.jpg"
+    },
+    {
+        "id": 4,
+        "estate_title": "Beachfront Villa",
+        "segment_name": "Residential",
+        "description": "A stunning villa with direct beach access and panoramic ocean views.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "3000 sq ft",
+        "location": "101 Ocean Drive, Malibu, CA",
+        "facilities": [
+            "living room",
+            "swimming pool",
+            "kitchen"
+        ],
+        "image": "https://example.com/images/beachfront-villa.jpg"
+    },
+    {
+        "id": 5,
+        "estate_title": "Downtown Loft",
+        "segment_name": "Commercial",
+        "description": "A trendy loft in the heart of downtown, perfect for young professionals.",
+        "price": "$3,000/month",
+        "status": "rent",
+        "area": "1500 sq ft",
+        "location": "202 Market Street, San Francisco, CA",
+        "facilities": [
+            "living room",
+            "kitchen"
+        ],
+        "image": "https://example.com/images/downtown-loft.jpg"
+    },
+    {
+        "id": 6,
+        "estate_title": "Suburban House",
+        "segment_name": "Residential",
+        "description": "A spacious suburban house with a large backyard and modern interiors.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "2200 sq ft",
+        "location": "303 Oak Street, Plano, TX",
+        "facilities": [
+            "living room",
+            "swimming pool",
+            "kitchen"
+        ],
+        "image": "https://example.com/images/suburban-house.jpg"
+    },
+    {
+        "id": 7,
+        "estate_title": "Mountain Cabin",
+        "segment_name": "Residential",
+        "description": "A rustic cabin in the mountains, ideal for nature lovers and adventurers.",
+        "price": "$250,000",
+        "status": "sale",
+        "area": "1400 sq ft",
+        "location": "404 Mountain Road, Boulder, CO",
+        "facilities": [
+            "living room",
+            "kitchen"
+        ],
+        "image": "https://example.com/images/mountain-cabin.jpg"
+    },
+    {
+        "id": 8,
+        "estate_title": "City Penthouse",
+        "segment_name": "Residential",
+        "description": "A luxurious penthouse with panoramic city views and high-end finishes.",
+        "price": "$900,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "505 Skyline Drive, Chicago, IL",
+        "facilities": [
+            "living room",
+            "swimming pool",
+            "kitchen"
+        ],
+        "image": "https://example.com/images/city-penthouse.jpg"
+    },
+    {
+        "id": 9,
+        "estate_title": "Rural Farmhouse",
+        "segment_name": "Residential",
+        "description": "A charming farmhouse in a rural setting, perfect for a quiet, peaceful life.",
+        "price": "$350,000",
+        "status": "sale",
+        "area": "2700 sq ft",
+        "location": "606 Country Lane, Lexington, KY",
+        "facilities": [
+            "living room",
+            "kitchen"
+        ],
+        "image": "https://example.com/images/rural-farmhouse.jpg"
+    }
+]

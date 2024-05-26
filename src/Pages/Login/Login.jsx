@@ -76,6 +76,7 @@ const Login = () => {
             .catch(error => {
                 console.log(error);
             })
+        navigate("/")
     }
 
     // user log in with github account
@@ -103,6 +104,7 @@ const Login = () => {
             .catch(error => {
                 console.log(error);
             })
+        navigate("/")
     }
 
     return (
