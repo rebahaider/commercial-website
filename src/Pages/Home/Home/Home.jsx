@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Slider from "../Slider/Slider";
+import Estates from "../../Estates/Estates";
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
     return (
         <div className="">
             <Slider></Slider>
+            <Estates></Estates>
         </div>
     );
 };

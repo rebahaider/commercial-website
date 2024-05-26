@@ -1,142 +1,146 @@
 [
     {
         "id": 1,
-        "estate_title": "Modern Family Home",
-        "segment_name": "Residential",
-        "description": "A beautiful modern home with all the amenities for a comfortable family life.",
-        "price": "$350,000",
-        "status": "sale",
-        "area": "2500 sq ft",
-        "location": "123 Maple Street, Springfield, IL",
+        "estate_title": "Downtown Office Space",
+        "segment_name": "Commercial",
+        "description": "A modern office space located in the heart of downtown, ideal for tech startups.",
+        "price": "$5,000/month",
+        "status": "rent",
+        "area": "3000 sq ft",
+        "location": "123 Business Ave, San Francisco, CA",
         "facilities": [
-            "living room",
-            "swimming pool",
+            "conference room",
+            "reception area",
             "kitchen"
         ],
-        "image": "https://example.com/images/modern-family-home.jpg"
+        "image": "https://i.ibb.co/1n5dmxP/relax-area-hotel.jpg"
     },
     {
         "id": 2,
-        "estate_title": "Luxury Apartment",
-        "segment_name": "Residential",
-        "description": "A luxury apartment with stunning city views and top-notch facilities.",
-        "price": "$450,000",
+        "estate_title": "Industrial Warehouse",
+        "segment_name": "Commercial",
+        "description": "A spacious warehouse suitable for storage and distribution.",
+        "price": "$750,000",
         "status": "sale",
-        "area": "1800 sq ft",
-        "location": "456 Elm Street, New York, NY",
+        "area": "10000 sq ft",
+        "location": "456 Industrial Road, Chicago, IL",
         "facilities": [
-            "living room",
-            "swimming pool",
-            "kitchen"
+            "loading dock",
+            "office space",
+            "parking"
         ],
-        "image": "https://example.com/images/luxury-apartment.jpg"
+        "image": "https://i.ibb.co/WDCLtry/large-warehouse-with-bright-light-coming-through-door-123827-23506.jpg"
     },
     {
         "id": 3,
-        "estate_title": "Cozy Cottage",
-        "segment_name": "Residential",
-        "description": "A charming cottage perfect for a weekend getaway or a small family.",
-        "price": "$200,000",
-        "status": "sale",
-        "area": "1200 sq ft",
-        "location": "789 Pine Street, Asheville, NC",
+        "estate_title": "Retail Storefront",
+        "segment_name": "Commercial",
+        "description": "A prime retail location with high foot traffic and modern interiors.",
+        "price": "$3,500/month",
+        "status": "rent",
+        "area": "2000 sq ft",
+        "location": "789 Main Street, New York, NY",
         "facilities": [
-            "living room",
-            "kitchen"
+            "display windows",
+            "storage room",
+            "restroom"
         ],
-        "image": "https://example.com/images/cozy-cottage.jpg"
+        "image": "https://i.ibb.co/THgPFzD/stores-closed-pandemic-concept-23-2148507420.jpg"
     },
     {
         "id": 4,
-        "estate_title": "Beachfront Villa",
-        "segment_name": "Residential",
-        "description": "A stunning villa with direct beach access and panoramic ocean views.",
+        "estate_title": "Medical Office Building",
+        "segment_name": "Commercial",
+        "description": "A fully equipped medical office ready for a new practice.",
         "price": "$1,200,000",
         "status": "sale",
-        "area": "3000 sq ft",
-        "location": "101 Ocean Drive, Malibu, CA",
+        "area": "4000 sq ft",
+        "location": "101 Health Plaza, Boston, MA",
         "facilities": [
-            "living room",
-            "swimming pool",
+            "examination rooms",
+            "waiting area",
             "kitchen"
         ],
-        "image": "https://example.com/images/beachfront-villa.jpg"
+        "image": "https://i.ibb.co/rmLnPmF/hospital-flat-banner-set-1284-10889.jpg"
     },
     {
         "id": 5,
-        "estate_title": "Downtown Loft",
+        "estate_title": "Business Park Unit",
         "segment_name": "Commercial",
-        "description": "A trendy loft in the heart of downtown, perfect for young professionals.",
-        "price": "$3,000/month",
-        "status": "rent",
-        "area": "1500 sq ft",
-        "location": "202 Market Street, San Francisco, CA",
+        "description": "An office unit in a bustling business park, perfect for corporate headquarters.",
+        "price": "$600,000",
+        "status": "sale",
+        "area": "3500 sq ft",
+        "location": "202 Enterprise Blvd, Dallas, TX",
         "facilities": [
-            "living room",
-            "kitchen"
+            "conference room",
+            "reception area",
+            "parking"
         ],
-        "image": "https://example.com/images/downtown-loft.jpg"
+        "image": "https://i.ibb.co/dkhvR9d/people-go-work-98292-2044.jpg"
     },
     {
         "id": 6,
-        "estate_title": "Suburban House",
-        "segment_name": "Residential",
-        "description": "A spacious suburban house with a large backyard and modern interiors.",
-        "price": "$400,000",
-        "status": "sale",
-        "area": "2200 sq ft",
-        "location": "303 Oak Street, Plano, TX",
+        "estate_title": "Co-Working Space",
+        "segment_name": "Commercial",
+        "description": "A flexible co-working space with modern amenities and a collaborative environment.",
+        "price": "$1,500/month",
+        "status": "rent",
+        "area": "1500 sq ft",
+        "location": "303 Innovation Drive, Austin, TX",
         "facilities": [
-            "living room",
-            "swimming pool",
+            "shared office",
+            "meeting rooms",
             "kitchen"
         ],
-        "image": "https://example.com/images/suburban-house.jpg"
+        "image": "https://i.ibb.co/r3FRnSZ/graphic-designers-working-their-desk-1170-1892.jpg"
     },
     {
         "id": 7,
-        "estate_title": "Mountain Cabin",
-        "segment_name": "Residential",
-        "description": "A rustic cabin in the mountains, ideal for nature lovers and adventurers.",
-        "price": "$250,000",
-        "status": "sale",
-        "area": "1400 sq ft",
-        "location": "404 Mountain Road, Boulder, CO",
+        "estate_title": "Restaurant Space",
+        "segment_name": "Commercial",
+        "description": "A fully furnished restaurant space ready for a new dining concept.",
+        "price": "$2,800/month",
+        "status": "rent",
+        "area": "2500 sq ft",
+        "location": "404 Culinary Lane, Los Angeles, CA",
         "facilities": [
-            "living room",
-            "kitchen"
+            "dining area",
+            "kitchen",
+            "storage"
         ],
-        "image": "https://example.com/images/mountain-cabin.jpg"
+        "image": "https://i.ibb.co/xG232vH/restaurant-interior-1127-3394.jpg"
     },
     {
         "id": 8,
-        "estate_title": "City Penthouse",
-        "segment_name": "Residential",
-        "description": "A luxurious penthouse with panoramic city views and high-end finishes.",
-        "price": "$900,000",
+        "estate_title": "Tech Hub Office",
+        "segment_name": "Commercial",
+        "description": "A tech hub office space with state-of-the-art facilities and high-speed internet.",
+        "price": "$800,000",
         "status": "sale",
-        "area": "2000 sq ft",
-        "location": "505 Skyline Drive, Chicago, IL",
+        "area": "3000 sq ft",
+        "location": "505 Silicon Valley Blvd, San Jose, CA",
         "facilities": [
-            "living room",
-            "swimming pool",
+            "server room",
+            "conference rooms",
             "kitchen"
         ],
-        "image": "https://example.com/images/city-penthouse.jpg"
+        "image": "https://i.ibb.co/8XSjSmQ/futuristic-school-classroom-future-students-23-2150906118.jpg"
     },
     {
         "id": 9,
-        "estate_title": "Rural Farmhouse",
-        "segment_name": "Residential",
-        "description": "A charming farmhouse in a rural setting, perfect for a quiet, peaceful life.",
-        "price": "$350,000",
+        "estate_title": "Boutique Hotel",
+        "segment_name": "Commercial",
+        "description": "A charming boutique hotel with a prime location and excellent amenities.",
+        "price": "$2,500,000",
         "status": "sale",
-        "area": "2700 sq ft",
-        "location": "606 Country Lane, Lexington, KY",
+        "area": "12000 sq ft",
+        "location": "606 Hospitality Lane, Miami, FL",
         "facilities": [
-            "living room",
-            "kitchen"
+            "guest rooms",
+            "swimming pool",
+            "restaurant"
         ],
-        "image": "https://example.com/images/rural-farmhouse.jpg"
+        "image": "https://i.ibb.co/ggfgvPZ/filter-pool-beautiful-landscape-blue-1203-6265.jpg"
     }
 ]
