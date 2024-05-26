@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import loginImg from "../../assets/login.jpg";
 import { useForm } from "react-hook-form";
 import { useContext, useEffect, useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import 'animate.css';
@@ -14,7 +14,8 @@ const Login = () => {
         document.title = "Commercial website | LogIn"
     })
 
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, signInWithGoogle,
+        signInWithGithub, } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState('');
     const navigate = useNavigate();
 
@@ -22,6 +23,8 @@ const Login = () => {
 
     const onSubmit = (data) => {
         console.log(data);
+
+        // user log in with email and password
         signInUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
@@ -48,6 +51,60 @@ const Login = () => {
         navigate("/")
     };
 
+    // user log in with google account
+    const handleSignInWithGoogle = () => {
+        signInWithGoogle()
+            .then(() => {
+                Swal.fire({
+                    title: "User Loged In Successfully",
+                    showClass: {
+                        popup: `
+                    animate__animated
+                    animate__fadeInUp
+                    animate__faster
+                  `
+                    },
+                    hideClass: {
+                        popup: `
+                    animate__animated
+                    animate__fadeOutDown
+                    animate__faster
+                  `
+                    }
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
+    // user log in with github account
+    const handleSignInWithGithub = () => {
+        signInWithGithub()
+            .then(() => {
+                Swal.fire({
+                    title: "User Loged In Successfully",
+                    showClass: {
+                        popup: `
+                    animate__animated
+                    animate__fadeInUp
+                    animate__faster
+                  `
+                    },
+                    hideClass: {
+                        popup: `
+                    animate__animated
+                    animate__fadeOutDown
+                    animate__faster
+                  `
+                    }
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
     return (
         <div className="bg-base-200">
             <div className="md:flex justify-around items-center gap-6 mt-20 mb-20 mr-10 ml-10">
@@ -68,19 +125,30 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type={showPassword ? "text" : "password"} placeholder="password" name="password" {...register("password", { required: true })} className="input input-bordered" />
-                            <span className="absolute bottom-32 right-48" onClick={() => setShowPassword(!showPassword)}>
+                            <input type={showPassword ? "text" : "password"} placeholder="password" name="password" {...register("password", { required: true })} className="input input-bordered relative" />
+                            <div className="absolute bottom-32 right-40  " onClick={() => setShowPassword(!showPassword)}>
                                 {
                                     showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                 }
-                            </span>
+                            </div>
                             {errors.password && <span className="text-red-600">Password is required</span>}
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="LogIn" />
                         </div>
                     </form>
-                    <p className="text-center">New Here, Please <Link to="/signUp" className="underline text-blue-700 font-bold">Sign Up</Link></p>
+                    <p className="text-center mb-3">New Here, Please <Link to="/signUp" className="underline text-blue-700 font-bold">Sign Up</Link></p>
+
+                    {/* Log in with Google */}
+                    <p className="text-center mb-4">
+                        <button onClick={handleSignInWithGoogle} className="btn btn-ghost btn-outline font-extrabold"><FaGoogle></FaGoogle> Log In Using Google Account</button>
+                    </p>
+
+
+                    {/* Login with Github */}
+                    <p className="text-center">
+                        <button onClick={handleSignInWithGithub} className="btn btn-ghost btn-outline font-extrabold"><FaGithub></FaGithub> Log In Using Github Account</button>
+                    </p>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
-import UserProfile from "../Pages/UserProfile/UserProfile";
+import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -27,11 +27,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/updateProfile",
-                element: <UpdateProfile></UpdateProfile>
-            },
-            {
-                path: "/userProfile",
-                element: <UserProfile></UserProfile>
+                element: <PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>
             }
         ]
     },

@@ -44,6 +44,36 @@ const SignUp = () => {
                       `
                     }
                 });
+
+                //  update profile
+                // updateProfile(result.user, {
+                //     displayName: data.name,
+                //     photoURL:data.photo,
+                // })
+                // .then(()=>console.log("profile updated"))
+                // .catch()
+
+
+            })
+            .catch(error => {
+                console.log(error.message);
+                Swal.fire({
+                    title: "User already exist",
+                    showClass: {
+                        popup: `
+                        animate__animated
+                        animate__fadeInUp
+                        animate__faster
+                      `
+                    },
+                    hideClass: {
+                        popup: `
+                        animate__animated
+                        animate__fadeOutDown
+                        animate__faster
+                      `
+                    }
+                });
             })
         reset();
         navigate("/")
@@ -58,6 +88,7 @@ const SignUp = () => {
                 <div className="md:w-1/2 shadow-2xl bg-base-100 p-10 mt-20 mb-20">
                     <h1 className="text-5xl font-bold text-center">Sign Up Now </h1>
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                        {/* name field */}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -65,6 +96,7 @@ const SignUp = () => {
                             <input type="text" placeholder="Name" name="name" {...register("name", { required: true })} className="input input-bordered" />
                             {errors.name && <span className="text-red-600">Name is required</span>}
                         </div>
+                        {/* email field */}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -72,12 +104,21 @@ const SignUp = () => {
                             <input type="email" name="email" {...register("email", { required: true })} placeholder="email" className="input input-bordered" />
                             {errors.email && <span className="text-red-600">Email is required</span>}
                         </div>
+                        {/* photo field */}
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo</span>
+                            </label>
+                            <input type="text" name="photo" {...register("photo", { required: true })} placeholder="Photo URL.." className="input input-bordered" />
+                            {errors.photo && <span className="text-red-600">Photo URL is required</span>}
+                        </div>
+                        {/* password field */}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type={showPassword ? "text" : "password"} name="password" {...register("password", { required: true, minLength: 6, pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,10}$/ })} placeholder="password" className="input input-bordered" />
-                            <span className="absolute bottom-10 right-48" onClick={() => setShowPassword(!showPassword)}>
+                            <input type={showPassword ? "text" : "password"} name="password" {...register("password", { required: true, minLength: 6, pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,10}$/ })} placeholder="password" className="input input-bordered relative" />
+                            <span className="absolute -bottom-12 right-48" onClick={() => setShowPassword(!showPassword)}>
                                 {
                                     showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                 }
