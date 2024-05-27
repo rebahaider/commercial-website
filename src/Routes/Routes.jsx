@@ -9,6 +9,7 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
 import SingleEstate from "../Pages/Estates/SingleEstate";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 export const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
                 path: "/singleEstate/:id",
                 element: <PrivateRoutes><SingleEstate></SingleEstate></PrivateRoutes>,
                 loader: () => fetch('fakeData.json')
+            },
+            {
+                path: "/contactUs",
+                element: <PrivateRoutes><ContactUs></ContactUs></PrivateRoutes>
             }
         ]
     },
