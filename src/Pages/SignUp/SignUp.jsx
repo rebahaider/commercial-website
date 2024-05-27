@@ -83,12 +83,12 @@ const SignUp = () => {
 
     return (
         <div className="bg-base-200">
-            <div className="md:flex justify-around items-center gap-6 mt-20 mb-20 mr-10 ml-10">
+            <div className="md:flex justify-around items-center gap-6 mt-20 mb-20 lg:mr-10 lg:ml-10">
                 <div className="md:w-1/2">
                     <img className="rounded-lg h-96 mx-auto" src={signUpImg} alt="" />
                 </div>
-                <div className="md:w-1/2 shadow-2xl bg-base-100 p-10 mt-20 mb-20">
-                    <h1 className="text-5xl font-bold text-center">Sign Up Now </h1>
+                <div className="md:w-1/2 shadow-2xl bg-base-100 p-10 lg:mt-20 lg:mb-20">
+                    <h1 className="lg:text-5xl font-bold text-center">Sign Up Now </h1>
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         {/* name field */}
                         <div className="form-control">
@@ -115,12 +115,12 @@ const SignUp = () => {
                             {errors.photo && <span className="text-red-600">Photo URL is required</span>}
                         </div>
                         {/* password field */}
-                        <div className="form-control">
+                        <div className="form-control relative border">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type={showPassword ? "text" : "password"} name="password" {...register("password", { required: true, minLength: 6, pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,10}$/ })} placeholder="password" className="input input-bordered relative" />
-                            <span className="absolute -bottom-12 right-48" onClick={() => setShowPassword(!showPassword)}>
+                            <input type={showPassword ? "text" : "password"} name="password" {...register("password", { required: true, minLength: 6, pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,10}$/ })} placeholder="password" className="input input-bordered" />
+                            <span className="absolute left-3/4 bottom-1/4" onClick={() => setShowPassword(!showPassword)}>
                                 {
                                     showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                 }

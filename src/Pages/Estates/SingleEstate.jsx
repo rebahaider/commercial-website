@@ -10,8 +10,8 @@ const SingleEstate = () => {
     const estateDetails = estates.find((estate) => estate.id === Number(id));
 
     return (
-        <div className="card w-1/2 mx-auto bg-base-200 shadow-xl m-4">
-            <figure className="px-10 pt-10">
+        <div className="card lg:w-1/2 mx-auto bg-base-200 shadow-xl m-4">
+            <figure className="lg:px-10 lg:pt-10">
                 <img src={estateDetails.image} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body">

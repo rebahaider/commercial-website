@@ -103,19 +103,38 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error);
+                Swal.fire({
+                    title: "Loged In Failed",
+                    showClass: {
+                        popup: `
+                    animate__animated
+                    animate__fadeInUp
+                    animate__faster
+                  `
+                    },
+                    hideClass: {
+                        popup: `
+                    animate__animated
+                    animate__fadeOutDown
+                    animate__faster
+                  `
+                    }
+                });
             })
-        navigate(location?.state ? location.state : "/")
-    }
+        navigate(location?.state ? location.state : "/");
+    };
 
     return (
         <div className="bg-base-200">
-            <div className="md:flex justify-around items-center gap-6 mt-20 mb-20 mr-10 ml-10">
+            <div className="md:flex justify-around items-center gap-6 mt-20 mb-20 lg:mr-10 lg:ml-10">
                 <div className="md:w-1/2">
                     <img className="rounded-lg" src={loginImg} alt="" />
                 </div>
-                <div className="md:w-1/2 shadow-2xl bg-base-100 p-10 mt-20 mb-20">
-                    <h1 className="text-5xl font-bold text-center">Log In Now </h1>
+                <div className="md:w-1/2 shadow-2xl bg-base-100 p-10 lg:mt-20 lg:mb-20">
+                    <h1 className="lg:text-5xl font-bold text-center">Log In Now </h1>
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+
+                        {/* email field */}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -123,18 +142,21 @@ const Login = () => {
                             <input type="email" placeholder="email" name="email" {...register("email", { required: true })} className="input input-bordered" />
                             {errors.email && <span className="text-red-600">Email is required</span>}
                         </div>
-                        <div className="form-control">
+
+                        {/* password field */}
+                        <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type={showPassword ? "text" : "password"} placeholder="password" name="password" {...register("password", { required: true })} className="input input-bordered relative" />
-                            <div className="absolute bottom-32 right-40  " onClick={() => setShowPassword(!showPassword)}>
+                            <input type={showPassword ? "text" : "password"} placeholder="password" name="password" {...register("password", { required: true })} className="input input-bordered" />
+                            <span className="absolute left-3/4 bottom-1/4" onClick={() => setShowPassword(!showPassword)}>
                                 {
                                     showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                 }
-                            </div>
+                            </span>
                             {errors.password && <span className="text-red-600">Password is required</span>}
                         </div>
+
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="LogIn" />
                         </div>

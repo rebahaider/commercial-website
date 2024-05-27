@@ -14,7 +14,7 @@ const Estates = () => {
     return (
         <div className="mb-10 mt-10">
             <h2 className="text-[#525079] text-4xl font-bold text-center mb-5 ">Our Commercial Estates</h2>
-            <div className="grid grid-cols-3 gap-6 bg-base-200 p-10 ">
+            <div className="grid lg:grid-cols-3 gap-6 bg-base-200 lg:p-10 ">
                 {
                     estates.map(estate => <div key={estate.id} className="card bg-base-100 shadow-xl rounded-2xl">
                         <figure><img className="w-80 h-80 pt-4" src={estate.image} alt="Album" /></figure>

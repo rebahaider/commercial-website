@@ -71,9 +71,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="bg-base-200">
-            <div className="ml-80 p-10">
+            <div className="lg:ml-80 lg:p-10">
                 <div className="md:w-1/2 shadow-2xl bg-base-100 p-10 mt-20 mb-20">
-                    <h1 className="text-5xl font-bold text-center">Update Your Profile</h1>
+                    <h1 className="lg:text-5xl sm:text-2xl font-bold text-center">Update Your Profile</h1>
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         {/* name field */}
                         <div className="form-control">
@@ -98,7 +98,7 @@ const UpdateProfile = () => {
                         </div>
 
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="Update Profile" />
+                            <input className="btn  bg-[#525079] text-white font-bold" type="submit" value="Update Profile" />
                         </div>
                     </form>
                 </div>
